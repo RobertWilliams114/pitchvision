@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# GPU note: verified working on an RTX 5070 (Blackwell, sm_120) with the
+# DEFAULT PyPI wheel — torch 2.13.0+cu130. No custom index URL needed.
+#   uv venv --python 3.12 && source .venv/bin/activate
+#   uv pip install torch torchvision
+#   uv pip install -r requirements.txt
+# Verify with: python -c "import torch; print(torch.cuda.get_arch_list())"
+# ---------------------------------------------------------------------------
+
+# Detection
+ultralytics>=8.3.0
+opencv-python>=4.9.0
+numpy>=1.26.0
+
+# Multi-object tracking (DeepSORT is implemented from scratch in the notebook)
+filterpy>=1.4.5      # Kalman filter — per-track motion state estimation
+scipy>=1.12.0        # linear_sum_assignment — Hungarian algorithm for data association
+
+# Visualization
+matplotlib>=3.8.0
+notebook>=7.0.0

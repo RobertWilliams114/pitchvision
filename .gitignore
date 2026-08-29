@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Input footage (12 MB) and rendered output video (62 MB) — too large for git
+data/
+outputs/*.mp4
+
+# Model weights — ultralytics downloads these on first run
+*.pt
+
+# Deliberately KEPT: outputs/*.svg (the tracking diagram)
+# TODO: export a short GIF or <10 MB clip of soccer_tracked.mp4 for the README —
+# the tracking output is the single most compelling thing in this project.
